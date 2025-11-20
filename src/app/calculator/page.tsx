@@ -300,7 +300,7 @@ export default function CalculatorPage() {
       const hazCost = COSTS.hazards[formData.hazards as keyof typeof COSTS.hazards] || 0;
 
       // Fixed deductions
-      const fixedDeductions: any = {};
+      const fixedDeductions: Record<string, number> = {};
       if (formData.hvac === 'fail') fixedDeductions.hvac = 5000;
       if (formData.roof === 'leak') fixedDeductions.roof = 3000;
       if (formData.found === 'struct') fixedDeductions.found = 15000;
